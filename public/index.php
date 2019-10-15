@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: application/json');
+$baseUrl = '/status';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
     $response = [
@@ -8,14 +9,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
             'message' => 'Method Not Allowed',
         ],
     ];
-} elseif (strtok($_SERVER['REQUEST_URI'], '?') === '/') {
+} elseif (strtok($_SERVER['REQUEST_URI'], '?') === "{$baseUrl}/") {
     $response = [
         'name' => 'Status Dashboard API',
         'description' => 'Wrapper for getting data from Uptime Robot\'s API',
         'about' => 'https://github.com/afonsodemori/aio-status-api',
         'version' => '0.0.1',
     ];
-} elseif (strtok($_SERVER['REQUEST_URI'], '?') !== '/monitors') {
+} elseif (strtok($_SERVER['REQUEST_URI'], '?') !== "{$baseUrl}/monitors") {
     $response = [
         'error' => [
             'code' => 404,
