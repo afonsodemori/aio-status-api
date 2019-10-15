@@ -12,5 +12,5 @@ In case this wrapper (https://api.status.afonso.io) is down,  **Status Dashboard
 
   - Frontend: https://status.afonso.io
   - Frontend source: https://github.com/afonsodemori/aio-status
-  - API: https://api.status.afonso.io
+  - API: https://apis.afonso.io/status/
   - API source: *(this repo)*
